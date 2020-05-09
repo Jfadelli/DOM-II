@@ -1,4 +1,4 @@
-// Your code goes here
+// Your code goes here.
 
 //addEventListener: https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener
 
