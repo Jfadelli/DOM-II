@@ -1,11 +1,7 @@
 // Your code goes here.
-
 //addEventListener: https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener
-
 //1. mouseenter event: https://developer.mozilla.org/en-US/docs/Web/API/Element/mouseenter_event
 const busImage = document.querySelector('.intro img')
-console.log('busImage', busImage);
-
 busImage.addEventListener('mouseenter', (e) => {
   busImage.style.transform = "scale(1.2)";
   busImage.style.transition = "all 0.3s"
@@ -31,13 +27,10 @@ changeWelcome.addEventListener('click', (e) => {
   changeWelcome.textContent = 'Ok, it\'s not actually that fun, but whatever...'
 })
 
-
 //5. keydown: https://developer.mozilla.org/en-US/docs/Web/Events/keydown
 const popup = document.querySelector('body')
 popup.addEventListener('keydown', (e) => {
   if (e.isComposing || event.keyCode === 66) {
-    console.log('honk')
-
     popup.textContent = 'HONK!'
     popup.style.fontSize = 'xx-large';
   }
@@ -45,7 +38,6 @@ popup.addEventListener('keydown', (e) => {
 
 //6. mouseover: https://developer.mozilla.org/en-US/docs/Web/Events/mouseover
 const diablo = document.querySelector('.img-content img')
-console.log(diablo)
 diablo.addEventListener('mouseover', (e) => {
   diablo.src = 'https://vignette.wikia.nocookie.net/median-xl/images/4/42/Diablo.gif/revision/latest/top-crop/width/360/height/450?cb=20180705014156'
 
@@ -53,7 +45,6 @@ diablo.addEventListener('mouseover', (e) => {
 
 //7. mouseout: https://developer.mozilla.org/en-US/docs/Web/API/Element/mouseout_event
 diablo.addEventListener('mouseout', (e) => {
-  console.log(e.target)
   diablo.src = 'img/adventure.jpg'
 })
 
@@ -83,15 +74,12 @@ HomeOnlyChangeColorBack.addEventListener('mouseleave', (e) => {
 })
 
 //10. resize https://developer.mozilla.org/en-US/docs/Web/API/Window/resize_event
-
 window.addEventListener('resize', (e) => {
   const squish = document.querySelector('.logo-heading')
-  console.log('STOP SQUISHING ME!', e)
   squish.textContent = 'STOP SQUISHING ME!!!!'
 })
 
 //Prevent nav from refreshing my page
-
 document.querySelector('.nav-link').addEventListener('click', (e) => {
   e.preventDefault()
 })
